@@ -1,0 +1,39 @@
+{
+  "name": "health-pets",
+  "version": "1.0.0",
+  "description": "Una web de venta para mascotas: alimentos, utilidades, etc.",
+  "keywords": [
+    "pets",
+    "healthpets",
+    "utilidades"
+  ],
+  "homepage": "https://github.com/Koridormi/Health-Pets#readme",
+  "bugs": {
+    "url": "https://github.com/Koridormi/Health-Pets/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Koridormi/Health-Pets.git"
+  },
+  "license": "MIT",
+  "author": "Koridormi",
+  "type": "module",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/stream": "^3.0.1",
+    "gulp": "^5.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^6.0.1",
+    "gulp-terser": "^2.1.0",
+    "rollup": "^4.62.2",
+    "sass": "^1.101.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}

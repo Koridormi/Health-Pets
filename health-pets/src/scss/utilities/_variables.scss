@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Tipografia
+$fuentePrincipal: "Roboto", sans-serif;
+
+// Paleta de Colores
+$colores:(
+    'primario': #73AB84,
+    'secundario': #99D19C,
+    'fondo': #ADE1E5,
+    'tipografia': #000501,
+    'focus': #f8ff8f
+);
+
+// Media-Queries
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1200px;
+$desktopXL: 1400px;

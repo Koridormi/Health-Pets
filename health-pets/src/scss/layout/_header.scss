@@ -1,0 +1,60 @@
+@use 'sass:map';
+@use '../utilities/variables' as var;
+@use '../utilities//mixins' as mix;
+
+// Header
+.header__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include mix.laptop {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    @include mix.desktop {
+        flex-direction: column;
+    }
+
+    .header__logo {
+        width: 35%;
+        @include mix.desktop {
+            width: 15%;
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+.header__nav {
+    ul {
+        display: flex;
+        column-gap: 3rem;
+        font-size: 3rem;
+        list-style: none;
+
+        li:first-child::after {
+            content: '|';
+            margin-left: 2.6rem;
+        }
+
+        li a {
+            text-decoration: none;
+            color: map.get(var.$colores, 'tipografia');
+            font-weight: 500;
+            transition: color 0.3s ease;
+            &:hover,
+            &:focus {
+                color: map.get(var.$colores, 'focus');
+            }
+        }
+
+        .nav__enlace--activo {
+            text-decoration: underline map.get(var.$colores, 'focus');
+            text-underline-offset: 0.7rem;
+        }
+    }
+}

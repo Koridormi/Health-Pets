@@ -1,0 +1,73 @@
+@use 'sass:map';
+@use '../utilities/variables' as var;
+@use '../utilities/mixins' as mix;
+
+// Main
+.main__heading {
+    text-align: center;
+    @include mix.desktop {
+        margin-top: 3rem;
+    }
+}
+.main__div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+
+    @include mix.contenedor;
+
+    @include mix.desktop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 0;
+        column-gap: 2rem;
+        padding: 0 15rem;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        transition: transform 0.3s ease;
+        &:hover {
+            cursor: pointer;
+        }
+        &:active {
+            transform: scale(1.03);
+        }
+    }
+
+    .div__novedades {
+        border-bottom: map.get(var.$colores, 'secundario') 0.2rem solid;
+        padding-bottom: 2rem;
+        h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        @include mix.tablet {
+            p {
+                font-size: 1.9rem;
+            }
+        }
+        @include mix.laptop {
+            h2 {
+                font-size: 3.2rem;
+            }
+            p {
+                font-size: 2.3rem;
+            }
+        }
+        @include mix.desktop {
+            border: none;
+            padding-bottom: 0;
+            h2{
+                text-align: left;
+            }
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+}
