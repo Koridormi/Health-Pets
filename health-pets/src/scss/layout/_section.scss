@@ -1,0 +1,27 @@
+@use 'sass:map';
+@use '../utilities/variables' as var;
+@use '../utilities/mixins' as mix;
+
+// Section
+.section__heading {
+    text-align: center;
+}
+.div__galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+
+    @include mix.contenedor;
+
+    img {
+        width: 100%;
+        border-radius: 0.5rem;
+        transition: transform 0.3s ease;
+        &:hover {
+            cursor: pointer;
+        }
+        &:active {
+            transform: scale(1.03);
+        }
+    }
+}
