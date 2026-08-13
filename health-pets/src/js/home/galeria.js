@@ -5,26 +5,8 @@ function generarGaleria() {
     const galeriaSite = document.querySelector('.section__div');
 
     const imagenes = [
-        '../../public/assets/home/galeria/1.webp',
-        '../../public/assets/home/galeria/2.webp',
-        '../../public/assets/home/galeria/3.webp',
-        '../../public/assets/home/galeria/4.webp',
-        '../../public/assets/home/galeria/5.webp',
-        '../../public/assets/home/galeria/6.webp',
-        '../../public/assets/home/galeria/7.webp',
-        '../../public/assets/home/galeria/8.webp',
-        '../../public/assets/home/galeria/9.webp',
-        '../../public/assets/home/galeria/10.webp',
-        '../../public/assets/home/galeria/11.webp',
-        '../../public/assets/home/galeria/12.webp',
-        '../../public/assets/home/galeria/13.webp',
-        '../../public/assets/home/galeria/14.webp',
-        '../../public/assets/home/galeria/15.webp',
-        '../../public/assets/home/galeria/16.webp',
-        '../../public/assets/home/galeria/17.webp',
-        '../../public/assets/home/galeria/18.webp',
-        '../../public/assets/home/galeria/19.webp',
-        '../../public/assets/home/galeria/20.webp'
+        1, 2, 3, 4, 5, 6 , 7, 8, 9, 10,
+        11, 12, 13, 14, 15, 16, 17, 18, 19, 20
     ];
 
     const galeriaDiv = document.createElement('DIV');
@@ -33,7 +15,7 @@ function generarGaleria() {
     const galeriaImg = imagenes.forEach( (src, index) => {
         const imagen = document.createElement('IMG');
 
-        imagen.src = src;
+        imagen.src = `../../public/assets/home/galeria/${src}.webp`;
         imagen.alt = `Imagen de la Galeria - ${index + 1}`;
         imagen.loading = 'lazy';
 
@@ -52,7 +34,7 @@ function mostrarImagen(index) {
 
     imagenDiv.classList.add('imagenDiv');
 
-    imagen.src = `../../public/assets/home/galeria/${index}.webp`;
+    imagen.src = `../../public/assets/home/galeria/${index + 1}.webp`;
     imagen.alt = `Imagen de la Galeria - ${index + 1}`;
 
     imagenDiv.appendChild(imagen);
@@ -74,8 +56,25 @@ function mostrarImagen(index) {
     html.classList.add('overflow-hidden');
 
     html.appendChild(modal);
+
+    const imagenes = document.querySelectorAll('.modal');
+    limpiarModal(imagenes);
 };
 
 function cerrarModal() {
-    console.log('X');
+    const modal = document.querySelector('.modal');
+    modal.classList.add('modal-fadeout');
+
+    setTimeout( () => {
+        const html = document.querySelector('html');
+
+        modal?.remove();
+        html.classList.remove('overflow-hidden');
+    }, 250);
+};
+
+function limpiarModal(modal) {
+    if (modal.length > 1 ) {
+        modal[0].remove();
+    };
 };
