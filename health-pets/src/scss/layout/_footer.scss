@@ -1,0 +1,13 @@
+@use 'sass:map';
+@use '../utilities/variables' as var;
+@use '../utilities/mixins' as mix;
+
+// Footer
+.site__footer {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 0;
+    background-color: #76b889;
+    color: map.get(var.$colores, 'tipografia');
+    padding: 0.5rem;
+}
