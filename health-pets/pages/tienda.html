@@ -9,17 +9,17 @@
     <meta name="keywords" content="pets, alimento, health, pet, tienda, shop">
     <meta name="author" content="Koridormi">
     <!-- Recursos -->
-    <link rel="icon" type="image/png" href="../public/icon.png">
-    <link rel="stylesheet" href="../build/css/style.css">
+    <link rel="icon" type="image/png" href="../icon.png">
+    <link rel="stylesheet" href="../css/style.css">
     <!-- Scripts -->
-    <script type="module" src="../build/js/app.js"></script>
+    <script type="module" src="../js/app.js"></script>
 </head>
 <body>
     <header class="site__header">
         <div class="header__div">
             <div class="header__logo">
                 <a href="../index.html">
-                    <img src="../public/logo/logo.webp" alt="Logo de Health Pets">
+                    <img src="../logo/logo.webp" alt="Logo de Health Pets">
                 </a>
             </div>
 
@@ -29,15 +29,29 @@
                         <a href="../index.html">Home</a>
                     </li>
                     <li>
-                        <a class="nav__enlace--activo" href="./pages/tienda.html">Tienda</a>
+                        <a class="nav__enlace--activo" href="./tienda.html">Tienda</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <!-- X -->
+    <aside>
+        <button>X</button>
+
+        <div>
+            <ul>
+                <!-- Lista de productos | JS -->
+            </ul>
+        </div>
+    </aside>
+
+    <main class="site__main">
+        <h2 class="main__heading">Productos Disponibles</h2>
+
+        <div class="main__div">
+            <!-- Lista de productos | JS -->
+        </div>
     </main>
 
     <footer class="site__footer">

@@ -1,5 +1,3 @@
-export {generarGaleria}
-
 // Functions
 function generarGaleria() {
     const galeriaSite = document.querySelector('.section__div');
@@ -78,3 +76,5 @@ function limpiarModal(modal) {
         modal[0].remove();
     };
 };
+
+export {generarGaleria};

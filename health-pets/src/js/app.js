@@ -1,4 +1,12 @@
 import {generarGaleria} from './home/galeria.js';
+import {obtenerProductos} from './shop/tienda.js';
 
 // Home
-generarGaleria();
+if (document.title === 'Health Pets | Home') {
+    generarGaleria();
+};
+
+// Shop
+if (document.title === 'Health Pets | Shop') {
+    obtenerProductos();
+};

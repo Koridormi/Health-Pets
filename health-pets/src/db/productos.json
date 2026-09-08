@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "titulo": "Alimento balanceado premium para perros",
+        "descripcion": "Bolsa resellable de alimento seco completo para perros adultos, con croquetas de tamaño mediano.",
+        "precio": 18900,
+        "imagen": "../assets/shop/productos/1.webp"
+    },
+    {
+        "id": 2,
+        "titulo": "Alimento húmedo para gatos",
+        "descripcion": "Pack de tres sobres de alimento húmedo con textura suave, ideal para complementar la hidratación diaria.",
+        "precio": 8900,
+        "imagen": "../assets/shop/productos/2.webp"
+    },
+    {
+        "id": 3,
+        "titulo": "Snacks dentales naturales",
+        "descripcion": "Bastones masticables con relieve que ayudan a complementar la rutina de higiene bucal de tu perro.",
+        "precio": 7200,
+        "imagen": "../assets/shop/productos/3.webp"
+    },
+    {
+        "id": 4,
+        "titulo": "Comedero doble elevado",
+        "descripcion": "Base de bambú con dos bowls removibles de acero inoxidable para servir agua y alimento.",
+        "precio": 24900,
+        "imagen": "../assets/shop/productos/4.webp"
+    },
+    {
+        "id": 5,
+        "titulo": "Arnés ergonómico reflectivo",
+        "descripcion": "Arnés ajustable con malla respirable, cierres rápidos y detalles reflectivos para paseos cómodos.",
+        "precio": 17800,
+        "imagen": "../assets/shop/productos/5.webp"
+    },
+    {
+        "id": 6,
+        "titulo": "Kit de paseo manos libres",
+        "descripcion": "Correa de cuerda con mango acolchado, collar ajustable y porta bolsas para los paseos diarios.",
+        "precio": 21500,
+        "imagen": "../assets/shop/productos/6.webp"
+    },
+    {
+        "id": 7,
+        "titulo": "Collar ajustable con identificación",
+        "descripcion": "Collar tejido resistente con hebilla metálica, argolla de sujeción y placa para identificación.",
+        "precio": 9800,
+        "imagen": "../assets/shop/productos/7.webp"
+    },
+    {
+        "id": 8,
+        "titulo": "Cama ortopédica acolchada",
+        "descripcion": "Cama ovalada con bordes de apoyo y almohadón removible para un descanso confortable.",
+        "precio": 36500,
+        "imagen": "../assets/shop/productos/8.webp"
+    },
+    {
+        "id": 9,
+        "titulo": "Rascador compacto para gatos",
+        "descripcion": "Torre de dos niveles con postes de sisal, refugio acolchado y juguete colgante.",
+        "precio": 42900,
+        "imagen": "../assets/shop/productos/9.webp"
+    },
+    {
+        "id": 10,
+        "titulo": "Arenero cubierto con pala",
+        "descripcion": "Arenero cerrado con entrada amplia, bandeja removible y pala a juego para una limpieza sencilla.",
+        "precio": 29800,
+        "imagen": "../assets/shop/productos/10.webp"
+    },
+    {
+        "id": 11,
+        "titulo": "Arena aglomerante natural",
+        "descripcion": "Bolsa resellable de arena mineral de rápida absorción y fácil retiro para mantener limpio el arenero.",
+        "precio": 12400,
+        "imagen": "../assets/shop/productos/11.webp"
+    },
+    {
+        "id": 12,
+        "titulo": "Set de cepillo y peine",
+        "descripcion": "Kit de aseo con cepillo de puntas redondeadas y peine metálico para desenredar el pelaje.",
+        "precio": 14200,
+        "imagen": "../assets/shop/productos/12.webp"
+    },
+    {
+        "id": 13,
+        "titulo": "Shampoo suave para mascotas",
+        "descripcion": "Shampoo de limpieza delicada con dispensador, pensado para el cuidado habitual de perros y gatos.",
+        "precio": 10500,
+        "imagen": "../assets/shop/productos/13.webp"
+    },
+    {
+        "id": 14,
+        "titulo": "Kit cortaúñas con lima",
+        "descripcion": "Cortaúñas ergonómico con protector de seguridad y lima compacta para un acabado cuidadoso.",
+        "precio": 11800,
+        "imagen": "../assets/shop/productos/14.webp"
+    },
+    {
+        "id": 15,
+        "titulo": "Peine fino antipulgas",
+        "descripcion": "Peine de acero inoxidable con dientes finos, mango de bambú y funda protectora de tela.",
+        "precio": 7600,
+        "imagen": "../assets/shop/productos/15.webp"
+    },
+    {
+        "id": 16,
+        "titulo": "Toallitas hipoalergénicas",
+        "descripcion": "Toallitas suaves en dispensador reutilizable para limpiar patas, pelaje y zonas sensibles.",
+        "precio": 9400,
+        "imagen": "../assets/shop/productos/16.webp"
+    },
+    {
+        "id": 17,
+        "titulo": "Transportadora ventilada",
+        "descripcion": "Transportadora rígida con puerta segura, paneles ventilados y manija superior de agarre cómodo.",
+        "precio": 45900,
+        "imagen": "../assets/shop/productos/17.webp"
+    },
+    {
+        "id": 18,
+        "titulo": "Fuente de agua silenciosa",
+        "descripcion": "Fuente compacta de circulación continua que mantiene el agua en movimiento durante el día.",
+        "precio": 33200,
+        "imagen": "../assets/shop/productos/18.webp"
+    },
+    {
+        "id": 19,
+        "titulo": "Set de juguetes interactivos",
+        "descripcion": "Conjunto de pelota dispensadora, nudo de cuerda y varita con plumas para estimular el juego.",
+        "precio": 15600,
+        "imagen": "../assets/shop/productos/19.webp"
+    },
+    {
+        "id": 20,
+        "titulo": "Paños absorbentes de entrenamiento",
+        "descripcion": "Pack de paños acolchados con bordes reforzados para acompañar el entrenamiento sanitario.",
+        "precio": 13700,
+        "imagen": "../assets/shop/productos/20.webp"
+    }
+]
