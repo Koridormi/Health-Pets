@@ -25,6 +25,7 @@
     "build": "gulp build"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "@rollup/plugin-commonjs": "^29.0.3",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/stream": "^3.0.1",
@@ -37,5 +38,8 @@
     "sass": "^1.103.1",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "sweetalert2": "^11.26.25"
   }
 }

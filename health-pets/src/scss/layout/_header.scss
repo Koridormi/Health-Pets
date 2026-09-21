@@ -2,59 +2,98 @@
 @use '../utilities/variables' as var;
 @use '../utilities/mixins' as mix;
 
-// Header
-.header__div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.site__header {
+    position: relative;
+    z-index: 5;
+    border-bottom: 0.1rem solid rgba(23, 53, 36, 0.12);
+    background-color: rgba(246, 242, 232, 0.96);
+}
 
-    @include mix.laptop {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    @include mix.desktop {
-        flex-direction: column;
-    }
+.header__div {
+    width: min(calc(100% - 3.2rem), 120rem);
+    min-height: 9.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.6rem;
+    margin-inline: auto;
 
     .header__logo {
-        width: 35%;
-        @include mix.desktop {
-            width: 15%;
+        width: 8rem;
+        flex: 0 0 auto;
+
+        @include mix.tablet {
+            width: 9.6rem;
         }
+
         img {
             display: block;
             width: 100%;
             height: auto;
         }
+
+        a {
+            display: block;
+            border-radius: 1.2rem;
+            transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+
+            @media (hover: hover) {
+                &:hover {
+                    transform: translateY(-0.2rem);
+                }
+            }
+        }
+    }
+
+    @include mix.tablet {
+        width: min(calc(100% - 6.4rem), 120rem);
+        min-height: 10.8rem;
     }
 }
+
 .header__nav {
     ul {
         display: flex;
-        column-gap: 3rem;
-        font-size: 3rem;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 1.7rem;
         list-style: none;
 
-        li:first-child::after {
-            content: '|';
-            margin-left: 2.6rem;
-        }
-
         li a {
-            text-decoration: none;
+            min-height: 4.4rem;
+            display: inline-flex;
+            align-items: center;
+            padding: 0.7rem 1rem;
+            border-radius: 1rem;
             color: map.get(var.$colores, 'tipografia');
-            font-weight: 500;
-            transition: color 0.3s ease;
+            font-weight: 600;
+            text-decoration: none;
+            text-underline-offset: 0.6rem;
+            transition: color 180ms ease, background-color 180ms ease;
+
             &:hover,
-            &:focus {
-                color: map.get(var.$colores, 'focus');
+            &:focus-visible {
+                color: map.get(var.$colores, 'primario');
+                background-color: rgba(185, 214, 179, 0.34);
             }
         }
 
         .nav__enlace--activo {
-            text-decoration: underline map.get(var.$colores, 'focus');
-            text-underline-offset: 0.7rem;
+            color: map.get(var.$colores, 'primario');
+            text-decoration: underline;
+            text-decoration-thickness: 0.2rem;
         }
+
+        @include mix.tablet {
+            gap: 1.2rem;
+            font-size: 1.9rem;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .header__logo a,
+    .header__nav a {
+        transition: none;
     }
 }

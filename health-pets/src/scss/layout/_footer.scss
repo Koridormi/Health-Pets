@@ -1,13 +1,28 @@
 @use 'sass:map';
 @use '../utilities/variables' as var;
-@use '../utilities/mixins' as mix;
 
-// Footer
 .site__footer {
+    padding: 3.2rem 1.6rem;
+    background-color: map.get(var.$colores, 'tipografia');
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer__content {
     display: flex;
-    justify-content: center;
-    margin: 2rem 0 0;
-    background-color: #76b889;
-    color: map.get(var.$colores, 'tipografia');
-    padding: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.footer__brand {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.footer__heading {
+    color: #dce9df;
+    font-size: 1.5rem;
+    font-weight: 500;
 }

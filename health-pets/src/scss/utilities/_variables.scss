@@ -1,15 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap');
 
 // Tipografia
-$fuentePrincipal: "Roboto", sans-serif;
+$fuentePrincipal: "Outfit", sans-serif;
 
 // Paleta de Colores
 $colores:(
-    'primario': #73AB84,
-    'secundario': #99D19C,
-    'fondo': #ADE1E5,
-    'tipografia': #000501,
-    'focus': #f8ff8f
+    'primario': #3f7651,
+    'secundario': #b9d6b3,
+    'fondo': #f6f2e8,
+    'superficie': #fffdf8,
+    'tipografia': #173524,
+    'texto-suave': #45614e,
+    'acento': #d96f4e,
+    'focus': #f0a36c
 );
 
 // Media-Queries

@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Pets | Shop</title>
+    <title>Tienda para mascotas | Health Pets</title>
     <!-- SEO -->
-    <meta name="description" content="Seccion de la tienda de Health Pets, donde podras encontrar productos para el cuidado de tu mascota.">
-    <meta name="keywords" content="pets, alimento, health, pet, tienda, shop">
+    <meta name="description" content="Explorá alimentos, accesorios, productos de higiene y bienestar para perros y gatos en la tienda de Health Pets.">
+    <meta name="keywords" content="tienda para mascotas, alimentos para mascotas, accesorios para perros, accesorios para gatos">
     <meta name="author" content="Koridormi">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#3f7651">
+    <meta property="og:title" content="Tienda para mascotas | Health Pets">
+    <meta property="og:description" content="Alimentos, accesorios, higiene y bienestar para perros y gatos.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_AR">
+    <meta name="twitter:card" content="summary">
     <!-- Recursos -->
     <link rel="icon" type="image/png" href="../icon.png">
     <link rel="stylesheet" href="../css/style.css">
@@ -15,57 +22,76 @@
     <script type="module" src="../js/app.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
     <header class="site__header">
         <div class="header__div">
             <div class="header__logo">
-                <a href="../index.html">
-                    <img src="../logo/logo.webp" alt="Logo de Health Pets">
+                <a href="../index.html" aria-label="Ir al inicio de Health Pets">
+                    <img src="../logo/logo.webp" alt="Health Pets" width="1000" height="1000">
                 </a>
             </div>
 
-            <nav class="header__nav">
+            <nav class="header__nav header__nav--shop" aria-label="Navegación principal">
                 <div>
                     <ul>
                         <li>
                             <a href="../index.html">Home</a>
                         </li>
                         <li>
-                            <a class="nav__enlace--activo" href="./tienda.html">Tienda</a>
+                            <a class="nav__enlace--activo" href="./tienda.html" aria-current="page">Tienda</a>
                         </li>
                     </ul>
                 </div>
 
                 <div class="nav__divCarrito">
-                    <button class="divCarrito__boton">
+                    <button class="divCarrito__boton" type="button" aria-expanded="false" aria-controls="carrito-panel">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M3 4H5L7.4 15.2C7.5 15.7 7.9 16 8.4 16H17.6C18.1 16 18.5 15.7 18.6 15.2L20 8H6" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             <circle cx="9" cy="20" r="1.5" fill="currentColor" />
                             <circle cx="17" cy="20" r="1.5" fill="currentColor" />
                         </svg>
+                        <span>Carrito</span>
                     </button>
 
-                    <div class="divCarrito__div" hidden>
-                        <ul class="div__carrito" id="div__carrito">
-                            <li id="carrito__vacio">El carrito esta vacio</li>
+                    <div class="divCarrito__div" id="carrito-panel" role="region" aria-labelledby="carrito-heading" hidden>
+                        <h2 class="divCarrito__heading" id="carrito-heading">Tu carrito</h2>
+                        <ul class="div__carrito" id="div__carrito" aria-live="polite">
+                            <li id="carrito__vacio">El carrito está vacío</li>
                             <!-- Carrito Generado | JS -->
                         </ul>
+
+                        <div>
+                            <button class="div__botones" type="button">Pagar</button>
+                            <button class="div__botones" type="button">Vaciar carrito</button>
+                        </div>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
 
-    <main class="site__main">
-        <h2 class="main__heading">Productos Disponibles</h2>
-
-        <div class="main__div">
-            <!-- Lista de productos | JS -->
+    <main class="site__main site__main--shop" id="contenido-principal" tabindex="-1">
+        <div class="shop__intro">
+            <h1 class="shop__heading">Todo para cuidar su día a día</h1>
+            <p class="shop__description">Explorá alimentos, accesorios, productos de higiene y bienestar para perros y gatos. Una selección práctica para acompañar cada rutina.</p>
         </div>
+
+        <section class="shop__catalog" aria-labelledby="catalogo-heading">
+            <h2 class="shop__catalog-heading" id="catalogo-heading">Productos disponibles</h2>
+
+            <div class="main__div shop__grid" aria-live="polite">
+                <!-- Lista de productos | JS -->
+            </div>
+        </section>
     </main>
 
     <footer class="site__footer">
-        <h2 class="footer__heading">Todos los Derechos Reservados</h2>
+        <div class="footer__content">
+            <p class="footer__brand">Health Pets</p>
+            <p class="footer__heading">Cuidado y bienestar para mascotas</p>
+        </div>
     </footer>
 </body>
 </html>
