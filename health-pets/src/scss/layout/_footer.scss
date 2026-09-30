@@ -2,27 +2,65 @@
 @use '../utilities/variables' as var;
 
 .site__footer {
-    padding: 3.2rem 1.6rem;
+    padding: 1.8rem 1.6rem;
     background-color: map.get(var.$colores, 'tipografia');
     color: #ffffff;
     text-align: center;
 }
 
 .footer__content {
+    width: min(100%, 120rem);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.4rem;
+    gap: 1.2rem;
+    margin-inline: auto;
 }
 
 .footer__brand {
-    font-size: 2rem;
+    font-size: 1.9rem;
     font-weight: 800;
     letter-spacing: -0.02em;
 }
 
 .footer__heading {
     color: #dce9df;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 500;
+}
+
+.footer__nav {
+    display: flex;
+    gap: 1.6rem;
+
+    a {
+        min-height: 4.4rem;
+        display: inline-flex;
+        align-items: center;
+        color: #ffffff;
+        font-weight: 700;
+        text-underline-offset: 0.5rem;
+
+        &:hover {
+            color: map.get(var.$colores, 'secundario');
+        }
+    }
+}
+
+.footer__legal {
+    color: #dce9df;
+    font-size: 1.3rem;
+}
+
+@media (min-width: 768px) {
+    .footer__content {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2.4rem;
+        text-align: left;
+    }
+
+    .footer__legal {
+        text-align: right;
+    }
 }

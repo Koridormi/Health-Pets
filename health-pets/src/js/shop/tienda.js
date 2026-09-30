@@ -101,7 +101,6 @@ function mostrarProductos(id, titulo, imagen, descripcion, precio) {
 };
 
 // Carrito Desplegable Codigo
-
 function carritoShop() {
     const carritoBox = [];
 
@@ -121,7 +120,10 @@ function agregarAlCarrito(data) {
         const producto = productos.find( (producto) => producto.id === id);
 
         if (producto) {
+            const carritoContainer = document.querySelector('#div__carrito');
             carrito.push(producto);
+
+            limpiarListadoCarrito(carritoContainer);
             crearListadoCarrito(carrito);
         };
     });
@@ -129,11 +131,15 @@ function agregarAlCarrito(data) {
 
 function crearListadoCarrito(carrito) {
     const carritoItems = document.querySelector('#div__carrito');
-    const carritoVacio = document.querySelector('#carrito__vacio');
+    const carritoVacio = document.createElement('li');
+
+    carritoVacio.id = 'carrito__vacio';
+    carritoVacio.textContent = 'El carrito está vacío';
+    carritoVacio.hidden = false;
+
+    carritoItems.appendChild(carritoVacio);
 
     const productos = carrito;
-
-    console.log(productos);
 
     if (productos.length > 0) carritoVacio.hidden = true;
 
@@ -156,6 +162,12 @@ function crearListadoCarrito(carrito) {
         carritoListItem.appendChild(itemDesc);
         carritoListItem.appendChild(itemPrecio);
     });
+};
+
+function limpiarListadoCarrito(contenedor) {
+    while (contenedor.firstChild) {
+        contenedor.removeChild(contenedor.firstChild);
+    };
 };
 
 export {obtenerProductos};

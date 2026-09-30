@@ -56,13 +56,16 @@
                     </button>
 
                     <div class="divCarrito__div" id="carrito-panel" role="region" aria-labelledby="carrito-heading" hidden>
-                        <h2 class="divCarrito__heading" id="carrito-heading">Tu carrito</h2>
-                        <ul class="div__carrito" id="div__carrito" aria-live="polite">
-                            <li id="carrito__vacio">El carrito está vacío</li>
+                        <div class="divCarrito__encabezado">
+                            <h2 class="divCarrito__heading" id="carrito-heading">Tu carrito</h2>
+                            <p>Revisá los productos seleccionados antes de continuar.</p>
+                        </div>
+
+                        <ul class="div__carrito" id="div__carrito" aria-label="Productos en el carrito" aria-live="polite" tabindex="0">
                             <!-- Carrito Generado | JS -->
                         </ul>
 
-                        <div>
+                        <div class="divCarrito__acciones">
                             <button class="div__botones" type="button">Pagar</button>
                             <button class="div__botones" type="button">Vaciar carrito</button>
                         </div>
@@ -89,8 +92,17 @@
 
     <footer class="site__footer">
         <div class="footer__content">
-            <p class="footer__brand">Health Pets</p>
-            <p class="footer__heading">Cuidado y bienestar para mascotas</p>
+            <div class="footer__copy">
+                <p class="footer__brand">Health Pets</p>
+                <p class="footer__heading">Productos para acompañar el cuidado diario de tu mascota.</p>
+            </div>
+
+            <nav class="footer__nav" aria-label="Navegación del pie de página">
+                <a href="../index.html">Inicio</a>
+                <a href="./tienda.html">Tienda</a>
+            </nav>
+
+            <p class="footer__legal">Todos los derechos reservados.</p>
         </div>
     </footer>
 </body>

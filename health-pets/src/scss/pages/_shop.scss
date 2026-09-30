@@ -60,46 +60,140 @@
     z-index: 10;
     top: calc(100% + 1rem);
     right: 0;
-    width: min(32rem, calc(100vw - 3.2rem));
-    padding: 1.8rem;
+    width: min(36rem, calc(100vw - 3.2rem));
+    max-height: min(64rem, calc(100dvh - 12rem));
+    display: grid;
+    grid-template-rows: auto minmax(7.2rem, 1fr) auto;
+    gap: 1.2rem;
+    overflow: hidden;
+    padding: 1.6rem;
     border-radius: 1.6rem;
     background-color: map.get(var.$colores, 'superficie');
     color: map.get(var.$colores, 'tipografia');
     box-shadow: 0 1.8rem 4.8rem rgba(23, 53, 36, 0.22);
 }
 
+.divCarrito__div[hidden] {
+    display: none;
+}
+
+.divCarrito__encabezado {
+    padding-bottom: 1.2rem;
+    border-bottom: 0.1rem solid rgba(23, 53, 36, 0.12);
+
+    p {
+        max-width: 34ch;
+        color: map.get(var.$colores, 'texto-suave');
+        font-size: 1.35rem;
+        line-height: 1.4;
+    }
+}
+
 .divCarrito__heading {
-    margin-bottom: 1rem;
-    font-size: 2rem;
+    margin-bottom: 0.4rem;
+    font-size: 2.2rem;
+    line-height: 1.2;
 }
 
 .div__carrito {
-    min-height: 10rem;
+    min-height: 7.2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-    padding: 0;
+    justify-content: flex-start;
+    gap: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-color: map.get(var.$colores, 'primario') #e7eee3;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    padding: 0 0.8rem 0 0;
     list-style: none;
 
+    &:focus-visible {
+        outline: 0.3rem solid map.get(var.$colores, 'focus');
+        outline-offset: 0.2rem;
+    }
+
+    [hidden] {
+        display: none;
+    }
+
     li {
+        display: grid;
+        grid-template-columns: 6.4rem minmax(0, 1fr);
+        grid-template-areas:
+            'image title'
+            'image description'
+            'image price';
+        gap: 0.3rem 1.2rem;
         padding: 1.2rem 0;
         border-bottom: 0.1rem solid rgba(23, 53, 36, 0.12);
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
     }
 
     img {
-        width: 7.2rem;
-        height: 7.2rem;
+        grid-area: image;
+        width: 6.4rem;
+        height: 6.4rem;
         display: block;
-        margin-block: 0.8rem;
-        border-radius: 1.2rem;
+        border-radius: 1rem;
         object-fit: cover;
     }
+
+    p:first-child {
+        grid-area: title;
+        font-weight: 700;
+        line-height: 1.25;
+    }
+
+    p:nth-of-type(2) {
+        grid-area: description;
+        color: map.get(var.$colores, 'texto-suave');
+        font-size: 1.3rem;
+        line-height: 1.35;
+    }
+
+    p:last-child {
+        grid-area: price;
+        font-weight: 800;
+        font-variant-numeric: tabular-nums;
+    }
+
+    &::-webkit-scrollbar {
+        width: 0.8rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 1rem;
+        background-color: #e7eee3;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border: 0.2rem solid #e7eee3;
+        border-radius: 1rem;
+        background-color: map.get(var.$colores, 'primario');
+    }
+}
+
+.divCarrito__acciones {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+    padding-top: 1.2rem;
+    border-top: 0.1rem solid rgba(23, 53, 36, 0.12);
 }
 
 .div__botones {
     min-height: 4.4rem;
-    margin: 0.8rem 0.4rem 0 0;
+    margin: 0;
     padding: 0.8rem 1.2rem;
     border: 0;
     border-radius: 1rem;
@@ -108,6 +202,16 @@
     font: inherit;
     font-weight: 700;
     cursor: pointer;
+
+    &:first-child {
+        background-color: map.get(var.$colores, 'tipografia');
+        color: #ffffff;
+    }
+
+    &:hover {
+        background-color: map.get(var.$colores, 'primario');
+        color: #ffffff;
+    }
 }
 
 .site__main--shop {
@@ -189,6 +293,8 @@
 
 .product-card__image {
     width: 100%;
+    height: auto;
+    flex: 0 0 auto;
     aspect-ratio: 1;
     display: block;
     object-fit: cover;
